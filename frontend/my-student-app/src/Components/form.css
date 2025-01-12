@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(244, 238, 238);
+
+    text-align:  center;
+}
+.background{
+
+
+    width:100%;
+    height:100%;
+
+ 
+
+  
+
+    
+
+    
+    
+}
+
+
+ol{
+    text-align: center;
+    
+
+}
+li{
+
+
+    padding:15px;
+
+    border-radius: 20px;
+
+
+
+    margin-bottom: 10px;
+
+
+    padding:15px;
+
+    border-radius: 20px;
+
+    background-color: rgb(202, 192, 192);
+
+    margin-bottom: 10px;
+
+  
+
+    
+
+    text-align: center;
+
+   
+
+}
+span{
+    flex:1;
+}
+    
+
+li{
+    padding: 10px;
+    
+}
