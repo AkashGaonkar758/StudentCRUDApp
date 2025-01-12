@@ -5,51 +5,18 @@ This repository contains a full-stack student management application. It uses **
 ## Table of Contents
 
 - [Overview](#overview)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Database Setup](#database-setup)
 - [Technologies Used](#technologies-used)
 - [API Integration](#api-integration)
 - [Model-View-Controller (MVC) Architecture](#mvc-architecture)
 - [Object-Relational Mapping](#object-relational-mapping)
+- [Installation](#installation)
 - [License](#license)
 
 ## Overview
 
 This project includes a Spring Boot backend and a React frontend for managing student data. The backend exposes a REST API to perform CRUD operations, while the frontend interacts with the backend and displays the data.
-
-## Installation
-
-### Set up the Backend
-
-1. Navigate to the `StudentCRUDApp` directory and run the Spring Boot backend with Maven:
-   ```bash
-   mvn spring-boot:run
-   ```
-
-### Set up the Database
-
-1. Open **MySQL Workbench** and create a database named `studentdb` (or change the database name in the `application.properties` file).
-2. The required table will be created automatically on the first run of the backend. If the table already exists, no new table will be created.
-
-### Set up the Frontend
-
-1. Navigate to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-   The frontend will be available at [http://localhost:5173](http://localhost:5173).
 
 ## Usage
 
@@ -117,6 +84,39 @@ fetch('http://localhost:8080/students', {
  
 
 
+## Installation
+
+### Set up the Backend
+
+1. Navigate to the `StudentCRUDApp` directory and run the Spring Boot backend with Maven:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+### Set up the Database
+
+1. Open **MySQL Workbench** and create a database named `studentdb` (or change the database name in the `application.properties` file).
+2. The required table will be created automatically on the first run of the backend. If the table already exists, no new table will be created.
+
+### Set up the Frontend
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+   The frontend will be available at [http://localhost:5173](http://localhost:5173).
+   
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
