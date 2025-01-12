@@ -1,48 +1,20 @@
 # Student CRUD Application
 
-This project is a Full-Stack application that allows users to add, update, delete, and find student records in a MySQL database. It uses Java with Spring Boot for the backend, and React for the frontend.
+This repository contains a full-stack application to manage student data with operations like adding, updating, deleting, and retrieving student records. It uses **Spring Boot** for the backend and **React** for the frontend. MySQL is used as the database.
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Database Setup](#database-setup)
-- [Frontend](#frontend)
-- [Backend](#backend)
-- [Contributing](#contributing)
+- [Technologies Used](#technologies-used)
+- [Model-View-Controller (MVC) Architecture](#mvc-architecture)
+- [Object-Relational Mapping](#object-relational-mapping)
 
 ## Overview
 
-This application enables managing student data with the following operations:
-
-- **Add Student**: Allows you to add new student records.
-- **Update Student**: Allows you to update student details like name and grade.
-- **Delete Student**: Enables removal of student records.
-- **Find Student**: Allows searching for students based on their unique ID.
-
-The backend is built using **Spring Boot**, **MVC** model, and **MySQL** for database management. On the frontend, **React** and **JavaScript** are used to create the user interface.
-
-## Tech Stack
-
-- **Backend**: 
-  - Spring Boot (Java)
-  - Spring MVC
-  - MySQL (Database)
-  - JDBC Template (For data access)
-  
-- **Frontend**:
-  - React (JavaScript)
-  - Vite (For development server)
-
-## Getting Started
-
-### Prerequisites
-
-- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) (version 8 or higher)
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-- [Node.js and npm](https://nodejs.org/) (for frontend)
+This project includes a Spring Boot backend and a React frontend for managing student data. The backend exposes a REST API to perform CRUD operations, while the frontend interacts with the backend and displays the data.
 
 ## Installation
 
@@ -77,8 +49,6 @@ The backend is built using **Spring Boot**, **MVC** model, and **MySQL** for dat
 
    The frontend will be available at [http://localhost:5173](http://localhost:5173).
 
-### Part 2: Usage, Database Setup, Frontend, Backend
-```markdown
 ## Usage
 
 1. After starting both the backend and frontend servers, navigate to the frontend in your browser (`http://localhost:5173`).
@@ -98,3 +68,36 @@ CREATE TABLE IF NOT EXISTS student(
     name VARCHAR(30) NOT NULL,
     grade INT NOT NULL
 );
+```
+
+This table is automatically created when the backend starts, if it doesn't already exist.
+
+## Model-View-Controller (MVC) Architecture
+
+The application follows the **Model-View-Controller (MVC)** design pattern for separation of concerns.
+
+- **Model**: Represents the data and the business logic. In this case, the `Student` class represents the student model, and all the CRUD operations are managed via the `Repo` class.
+- **View**: The frontend, built using React, serves as the view that communicates with the user.
+- **Controller**: The `StudentController` in Spring Boot acts as the intermediary between the model and the view, handling HTTP requests and interacting with the repository layer.
+
+This structure allows for better maintainability and scalability of the application.
+
+## Object-Relational Mapping (ORM)
+
+This application uses **manual object-relational mapping (ORM)**. The mapping between the Java objects and the relational database is done manually. Here’s how the data is mapped:
+
+- **Student Model**: Represents the `student` table in MySQL. It contains fields like `id`, `name`, and `grade`.
+- **Repository**: The `Repo` class manually maps Java objects to SQL queries. For example, `jdbcTemplate.update()` is used for adding, updating, or deleting a student in the database.
+- **RowMapper**: The `StudentRowMapper` is used to convert rows of the result set into `Student` objects, which are then returned by the repository methods.
+
+This approach allows greater flexibility and control over how the database is queried and how Java objects are stored and retrieved.
+
+## Technologies Used
+
+- **Backend**: Spring Boot, Java
+- **Frontend**: React, Vite
+- **Database**: MySQL
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
