@@ -1,6 +1,6 @@
 # Student CRUD Application
 
-This repository contains a full-stack application to manage student data with operations like adding, updating, deleting, and retrieving student records. It uses **Spring Boot** for the backend and **React** for the frontend. MySQL is used as the database.
+This repository contains a full-stack student management application. It uses **Spring Boot** (Java) for the backend, **React** (JavaScript) for the frontend, and **MySQL** for the database, enabling operations like adding, updating, deleting, and retrieving student records.
 
 ## Table of Contents
 
@@ -94,8 +94,8 @@ This approach allows greater flexibility and control over how the database is qu
 
 ## Technologies Used
 
-- **Backend**: Spring Boot, Java
-- **Frontend**: React, Vite
+- **Backend**: Spring Boot, Java, SQL (MySQL)
+- **Frontend**: React, JavaScript, HTML, CSS
 - **Database**: MySQL
 
 ## License
