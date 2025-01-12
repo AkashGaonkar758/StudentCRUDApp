@@ -9,8 +9,10 @@ This repository contains a full-stack student management application. It uses **
 - [Usage](#usage)
 - [Database Setup](#database-setup)
 - [Technologies Used](#technologies-used)
+- [API Integration](#api-integration)
 - [Model-View-Controller (MVC) Architecture](#mvc-architecture)
 - [Object-Relational Mapping](#object-relational-mapping)
+- [License](#license)
 
 ## Overview
 
@@ -97,6 +99,23 @@ This approach allows greater flexibility and control over how the database is qu
 - **Backend**: Spring Boot, Java, SQL (MySQL)
 - **Frontend**: React, JavaScript, HTML, CSS
 - **Database**: MySQL
+
+## API Integration
+
+The frontend communicates with the backend through API calls, enabling seamless data exchange between the user interface and the database.
+
+- **Fetch API**: The React frontend uses the Fetch API to send HTTP requests (GET, POST, PUT, DELETE) to the backend to perform operations like adding, updating, and deleting student records.
+- **Postman**: Postman is used to test and verify the backend API endpoints before integrating them into the frontend. This ensures that all CRUD operations work as expected.
+
+For example, to add a student, the frontend sends a POST request to the backend API with the student's name and grade:
+
+```javascript
+fetch('http://localhost:8080/students', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+ 
+
 
 ## License
 
