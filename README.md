@@ -28,7 +28,7 @@ This project includes a Spring Boot backend and a React frontend for managing st
 ### Set up the Database
 
 1. Open **MySQL Workbench** and create a database named `studentdb` (or change the database name in the `application.properties` file).
-2. The required table will be created automatically on the first run of the backend.
+2. The required table will be created automatically on the first run of the backend. If the table already exists, no new table will be created.
 
 ### Set up the Frontend
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS student(
 );
 ```
 
-This table is automatically created when the backend starts, if it doesn't already exist.
+This table is automatically created when the backend starts, if it doesn't already exist. The backend, through the Spring Boot application, executes a SQL statement during the application’s startup (`@PostConstruct` annotation), ensuring the table is created in the `studentdb` database if it's not already present.
 
 ## Model-View-Controller (MVC) Architecture
 
